@@ -41,15 +41,13 @@ button, input[type="submit"]{
 
 @font-face {
 	font-family:topfont;
-	src:url( ".fonts/WARNA.ttf");
+	src:url( "../fonts/WARNA.ttf");
 
 }
 @font-face {
 font-family:bannerfont;
-	src:url( ".fonts/YaldeviColombo-Regular.ttf" );
+	src:url( "../fonts/YaldeviColombo-Regular.ttf" );
 }
-
-
 .total_banner {
     border: double thick #FFB3B1;
 }
@@ -108,7 +106,7 @@ margin: 1rem;
 .to-top {
     padding: 8px 13px;
     border: none;
-    background: #0e6efd;
+    background: #c45c4b;
     color: white;
     position: fixed;
     font-size: 18px;
@@ -122,6 +120,10 @@ margin: 1rem;
         -ms-transform: translateY(200px);
             transform: translateY(200px);
     z-index: 99;
+}
+
+.to-top:hover{
+    background: #850303;
 }
 /*=================header=====================*/
 .header-top .logo {
@@ -159,10 +161,20 @@ margin: 1rem;
     border: 2px solid #E1A4A2;
 }
 .small-screen-menu button {
-    background: none;
-    border: none;
+    padding: 6px;
+    background: #faf381;
+    border-width:2px;
+    border-color: #800000;
+    border-radius: 10px;
     font-size: 25px;
+
 }
+.small-screen-menu button:hover{
+    background:#fcd600;
+    box-shadow: 5px 5px 6px grey;
+    zoom:101%
+}
+
 .small-screen-menu {
     display: none;
     -webkit-box-align: center;
@@ -185,7 +197,7 @@ margin: 1rem;
 }
 .page-change button {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #c00808a8;
     border: none;
     height: 35px;
     padding: 0 15px;
@@ -200,7 +212,7 @@ margin: 1rem;
     margin-top: 25px;
 }
 .page-change button:hover {
-    background: #0b5ed7;
+    background: #850303;
 }
 ul.menu-row {
     display: -webkit-box;
@@ -215,16 +227,26 @@ ul.menu-row {
             justify-content: space-between;
     margin: 30px 0;
 }
+
 ul.menu-row li a {
-    border-style: ridge;
-    padding: 5px;
-    background-color: #FFE2E1;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #ffe0df;
     font-size: 20px;
     text-decoration: none;
     color: #800000;
     font-family: "iskoola Pota", kaputaUnicode, "malithi Web", kandyUnicode;
-    font-weight: normal;
+    font-weight: bold;
 }
+ul.menu-row li a:hover{
+    background-color: #ffb3b1;
+    color: black;
+    zoom: 101%;
+    box-shadow: 5px 5px 5px gray;
+}
+
 /* mobile menu */
 .mobile-menu {
     height: 100%;
@@ -323,6 +345,10 @@ p.top-content-1 {
     font-size: 1.3rem;
     font-weight: bold;
 }
+.item:hover{
+    box-shadow: 5px 5px 6px grey;
+    zoom: 101%;
+}
 /* =======================tables and searches=========================== */
 .tables-and-search {
     display: -ms-grid;
@@ -336,12 +362,22 @@ p.top-content-1 {
     margin: 10px 0;
 }
 .search-text-input {
-    height: 30px;
+    border-radius: 5px;
+    height: 40px;
     padding: 0 0 0 5px;
 }
 .search-submit {
-    height: 30px;
-    padding: 0 5px;
+    color: #800000;
+    background-color: #ffe0df;
+    height: 40px;
+    padding:5px;
+    border-radius:5px;
+    font-weight: bold;
+}
+
+.search-submit:hover{
+    zoom: 101%;
+    background-color: #ffb3b1;
 }
 /* tables */
 .tables .main-table:first-child {
@@ -466,7 +502,18 @@ footer p a{
 .social-btn img {
     width: 16px;
 }
+
+
 /* ============================responsive============================= */
+
+/* responsive menu buttons */
+
+@media only screen and (min-width: 1600px){
+   body{
+       padding: 0 120px;
+   }
+}
+
 @media only screen and (max-width: 1315px){
     .backyellow audio{
         width: 240px;
@@ -508,6 +555,7 @@ footer p a{
 }
 @media only screen and (max-width: 900px){
     .tables-and-search .tables{
+        justify-content: center;
         display: -ms-grid !important;
         display: grid !important;
             grid-template-areas: 'colorItems firstTable''colorItems secondTable';
@@ -593,6 +641,7 @@ footer p a{
     }
     
     .small-screen-menu{
+        margin-top: 1rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
