@@ -289,7 +289,7 @@ ul.menu-row li a:hover{
 .close-item-win {
     width: 35px;
     height: 35px;
-    background: #2f2f2f;
+    color: white;
     display: none;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -306,7 +306,8 @@ ul.menu-row li a:hover{
 }
 /* top content */
 p.top-content-1, p.top-content-2 {
-    font-size: 18px;
+    text-align: justify;
+    font-size: 20px;
 }
 p.top-content-1 {
     margin-bottom: 20px;
@@ -372,6 +373,7 @@ p.top-content-1 {
     height: 40px;
     padding:5px;
     border-radius:5px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -379,6 +381,7 @@ p.top-content-1 {
     zoom: 101%;
     background-color: #ffb3b1;
 }
+
 /* tables */
 .tables .main-table:first-child {
     grid-area: firstTable;
